@@ -14,7 +14,7 @@ app.get('/ping', (req, res) => {
     res.send('PONG');
 });
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
     res.redirect('/login');
 });
 
