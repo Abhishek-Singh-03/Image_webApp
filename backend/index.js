@@ -14,6 +14,10 @@ app.get('/ping', (req, res) => {
     res.send('PONG');
 });
 
+app.get('/', (req, res) => {
+    res.redirect('/login');
+});
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/auth', AuthRouter);
