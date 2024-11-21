@@ -14,9 +14,9 @@ app.get('/ping', (req, res) => {
     res.send('PONG');
 });
 
-app.post('/', (req, res) => {
-    res.redirect('/login');
-});
+// app.post('/', (req, res) => {
+//     res.redirect('/login');
+// });
 
 app.use(bodyParser.json());
 app.use(cors());
