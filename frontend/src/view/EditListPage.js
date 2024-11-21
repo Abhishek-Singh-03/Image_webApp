@@ -80,7 +80,7 @@ function EditListPage() {
         const confirmDelete = window.confirm('Are you sure you want to delete this list?');
         if (confirmDelete) {
             try {
-                const response = await fetch(`https://image-webapp.onrender.com//lists/${id}`, {
+                const response = await fetch(`https://image-webapp.onrender.com/lists/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,

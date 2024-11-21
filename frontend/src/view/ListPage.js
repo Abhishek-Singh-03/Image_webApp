@@ -10,7 +10,7 @@ function ListPage() {
     useEffect(() => {
         const fetchLists = async () => {
             try {
-                const response = await fetch('https://image-webapp.onrender.com//lists/all', {
+                const response = await fetch('https://image-webapp.onrender.com/lists/all', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
                     },
@@ -33,7 +33,7 @@ function ListPage() {
 
     const handleDelete = async (listId) => {
         try {
-            const response = await fetch(`https://image-webapp.onrender.com//lists/${listId}`, {
+            const response = await fetch(`https://image-webapp.onrender.com/lists/${listId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
