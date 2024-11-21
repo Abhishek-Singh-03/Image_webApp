@@ -81,7 +81,7 @@ function SearchPage() {
                 createdAt: new Date().toISOString(),
             };
 
-            const response = await fetch('http://localhost:8080/lists/save', {
+            const response = await fetch('https://image-webapp.onrender.com//lists/save', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

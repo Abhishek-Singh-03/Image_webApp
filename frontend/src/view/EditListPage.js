@@ -16,7 +16,7 @@ function EditListPage() {
     useEffect(() => {
         const fetchList = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/lists/single/${id}`, {
+                const response = await fetch(`https://image-webapp.onrender.com/lists/single/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
                     },
@@ -51,7 +51,7 @@ function EditListPage() {
         }
 
         try {
-            const response = await fetch(`http://localhost:8080/lists/${id}`, {
+            const response = await fetch(`https://image-webapp.onrender.com/lists/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -80,7 +80,7 @@ function EditListPage() {
         const confirmDelete = window.confirm('Are you sure you want to delete this list?');
         if (confirmDelete) {
             try {
-                const response = await fetch(`http://localhost:8080/lists/${id}`, {
+                const response = await fetch(`https://image-webapp.onrender.com//lists/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
